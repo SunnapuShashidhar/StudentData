@@ -14,7 +14,9 @@ mongoose.connect(DBURL);
 app.use(cors({
   origin: "*"
 }))
-app.use("/", Controls)
+app.use("/", (req,res)=>{
+  res.send("App Is Running")
+})
 
 app.listen(5000, (req, res) => {
   console.log("server is running on port number 5000")
