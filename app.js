@@ -4,11 +4,10 @@ var app = express();
 var Controls = require("./Controlls/Controls")
 var DBURL = require('./Properties').DBURL;
 var cors = require("cors")
-var serveStatic = require('serve-static');
+
 mongoose.connect(DBURL);
 
 
-app.use(serveStatic("./Controlls/Controls"));
 app.use(cors({
   origin: "*"
 }))
