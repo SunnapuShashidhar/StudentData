@@ -6,11 +6,11 @@ var DBURL = require('./Properties').DBURL;
 var cors = require("cors")
 
 mongoose.connect(DBURL);
-
-
-app.use(cors({
+const Contro=cors({
   origin: "*"
-}))
+})
+
+app.use(Contro)
 app.use("/", Controls)
 
 app.listen(5000, (req, res) => {
